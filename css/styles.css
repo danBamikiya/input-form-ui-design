@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 100%;
+    width: auto;
+    height: 100%;
+    font-family: sans-serif;
+    background: url('../img/form-bg.png')no-repeat fixed center;
+    background-size: cover;
+}
+
+.box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    padding: 50px;
+    background: rgba(0, 0, 0, .8);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .5);
+    border-radius: 10px 100px;
+}
+
+.box h2 {
+    color: #fff;
+    margin: 0 0 30px;
+    text-align: center;
+}
+
+.box .inputBox {
+    position: relative;
+    outline: none;
+}
+
+.box .inputBox input {
+    width: 100%;
+    padding: 10px 16px;
+    font-size: 16px;
+    color: #fff;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    border: none;
+    border-radius: 0px 0px 0px 23px;
+    border-bottom: 1px solid #00f;
+    outline: none;
+    background: transparent;
+    transition: .5s;
+}
+
+#username {
+    margin-bottom: 50px;
+}
+
+.box .inputBox label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0 14px 17px;
+    font-size: 16px;
+    color: #fff;
+    letter-spacing: 1px;
+    pointer-events: none;
+    transition: .5s;
+    outline: none;
+}
+
+.box .inputBox input:focus~label,
+.box .inputBox input:valid~label {
+    top: -20px;
+    left: 0;
+    color: #03a9f4;
+    font-size: 12px;
+    outline: none;
+}
+
+.box input[type="submit"] {
+    background: rgba(0, 0, 255, 0);
+    border: 2px solid rgb(0, 0, 255);
+    letter-spacing: 1px;
+    border-radius: 100% 100% 5px 100%;
+    outline: none;
+    color: #fff;
+    padding: 10px 5px;
+    cursor: pointer;
+    perspective: 1000px;
+}
+
+.box input[type="submit"]:focus {
+    transform: rotateY(360deg);
+    transition: transform 0.8s ease-in-out;
+    transform-style: preserve-3d;
+    perspective: initial;
+}
